@@ -1,0 +1,58 @@
+************************************************************
+
+For both Task 1 & 2, they just execuate 1 time.
+
+************************************************************
+
+And I did not assign the loopback interface to each node,
+so the nodes are running on the same ip address.
+
+************************************************************
+
+Code ReUse:
+
+	The PrimalityTest.py is used from:
+http://www.codeproject.com/Articles/691200/Primality-test-
+algorithms-Prime-test-The-fastest-w
+
+************************************************************
+
+For Task 1:
+
+Open 2 terminal windows to execuate Task1_A.py and Task1_B.py
+separately.
+
+	Task1_A.py is modified from:
+http://asyncoro.sourceforge.net/_downloads/tut_client.py
+
+	Task1_B.py is modified from:
+http://asyncoro.sourceforge.net/_downloads/tut_server.py
+
+	Exchange messages with one-to-one message passing 
+to exchange messages between two remote coroutines. A read 
+the data and send it to B, then B sorted and printed out.
+
+*************************************************************
+
+For Task 2:
+
+Open 4 terminal windows to execuate Task2_D.py, Task2_C.py
+Task2_B.py and Task2_A.py in order.
+
+	Task2_A.py is modified from:
+http://asyncoro.sourceforge.net/_downloads/remote_coro_client.py
+
+	Task2_B.py is modified from:
+http://asyncoro.sourceforge.net/_downloads/remote_coro_server.py
+and http://asyncoro.sourceforge.net/_downloads/tut_sock_client.py
+
+	Task2_C.py is modified from:
+http://asyncoro.sourceforge.net/_downloads/remote_coro_server.py
+and http://asyncoro.sourceforge.net/_downloads/tut_sock_client.py
+
+	Task2_D.py is modified from:
+http://asyncoro.sourceforge.net/_downloads/tut_sock_client.py
+
+	A send data to B and C, then B and C check whether the data
+is prime or not in parallel. Both the results are sent to D via TCP
+socket. Finally, the D would show the 2 sorted array, same as the task1
