@@ -49,9 +49,9 @@ In our project, we predefine a task graph, it's a DAG (Directed Acyclic Graph)
 
 Task A: sqaure root of an input
 
-Task B: power of 2 from output A
+Task B: power of 5 from output A
 
-Task C: power of 5 from output A
+Task C: power of 3 from output A
 
 Task D: result_B + result_C + 1
 
