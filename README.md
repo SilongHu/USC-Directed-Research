@@ -43,7 +43,7 @@ Hello! I'm rank 3 from 4 running in total...
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+In our project, we predefine a task graph, it's a DAG (Directed Acyclic Graph)
 
 ### Break down into end to end tests
 
