@@ -47,7 +47,7 @@ Hello! I'm rank 3 from 4 running in total...
 
 In our project, we predefine a task graph, it's a DAG (Directed Acyclic Graph)
 
-![Task Graph](https://github.com/SilongHu/USC-Directed-Research/blob/master/task_graph.png)
+![Task Graph](https://github.com/SilongHu/USC-Directed-Research/blob/master/taskGraph.png)
 
 Task A: sqaure root of an input
 
