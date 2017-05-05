@@ -2,6 +2,8 @@
 
 USC 2017 Spring Directed Research ----- Distributed Wireless Computing
 
+In this project, we are using MPI4PY for distributed computing, based on predefined task graph, to execute each task distributed by task-device assigment.
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -45,20 +47,21 @@ Hello! I'm rank 3 from 4 running in total...
 
 In our project, we predefine a task graph, it's a DAG (Directed Acyclic Graph)
 
-### Break down into end to end tests
+![Task Graph](https://github.com/SilongHu/USC-Directed-Research/blob/master/task_graph.png)
 
-Explain what these tests test and why
+Task A: sqaure root of an input
+
+Task B: power of 2 from output A
+
+Task C: power of 5 from output A
+
+Task D: result_B + result_C + 1
+
+
+Using the following command to assign task to each device. (Assign task A on device 0, B on 1, C on 1 and D on 2)
 
 ```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
+$python main.py 0 1 1 2
 ```
 
 ## Deployment
