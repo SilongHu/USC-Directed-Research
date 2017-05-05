@@ -8,29 +8,38 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Our project is based on MPI4PY tool. 
 
 ```
-Give examples
+$[sudo] pip install mpi4py
 ```
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
+Before we installing the MPI4PY, MPICH source code should be compiled. Downloaded from
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+*[MPICH Source Code Download](https://www.mpich.org/downloads/)
 
 ```
-until finished
+$tar -zxvf mpich-XX.gz
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+And /cd that directory
+
+```
+$./configure
+$[sudo] make && make install
+```
+
+End with an example of getting some data out of the system, download [helloworld example](https://github.com/jbornschein/mpi4py-examples/blob/master/01-hello-world) and look at the following result
+
+```
+$ mpiexec -n 4 python ./helloworld
+Hello! I'm rank 0 from 4 running in total...
+Hello! I'm rank 1 from 4 running in total...
+Hello! I'm rank 2 from 4 running in total...
+Hello! I'm rank 3 from 4 running in total...
+```
 
 ## Running the tests
 
