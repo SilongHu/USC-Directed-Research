@@ -10,14 +10,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Our project is based on MPI4PY tool. 
-
-```
-$[sudo] pip install mpi4py
-```
-
-### Installing
-
 Before we installing the MPI4PY, MPICH source code should be compiled. Downloaded from [MPICH Source Code Download](https://www.mpich.org/downloads/)
 
 ```
@@ -30,6 +22,15 @@ And /cd that directory
 $./configure
 $[sudo] make && make install
 ```
+
+### Installing
+
+After installing the MPICH, then install MPI4PY.
+
+```
+$[sudo] pip install mpi4py
+```
+
 
 End with an example of getting some data out of the system, download [helloworld example](https://github.com/jbornschein/mpi4py-examples/blob/master/01-hello-world) and look at the following result
 
