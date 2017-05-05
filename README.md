@@ -2,7 +2,7 @@
 
 USC 2017 Spring Directed Research ----- Distributed Wireless Computing
 
-In this project, we are using MPI4PY for distributed computing, based on predefined task graph, to execute each task distributed by task-device assigment.
+In this project, we are using MPI4PY (Message Passing Interface for Python) for distributed computing, based on predefined task graph, to execute each task distributed by task-device assigment.
 
 ## Getting Started
 
@@ -18,9 +18,7 @@ $[sudo] pip install mpi4py
 
 ### Installing
 
-Before we installing the MPI4PY, MPICH source code should be compiled. Downloaded from
-
-*[MPICH Source Code Download](https://www.mpich.org/downloads/)
+Before we installing the MPI4PY, MPICH source code should be compiled. Downloaded from [MPICH Source Code Download](https://www.mpich.org/downloads/)
 
 ```
 $tar -zxvf mpich-XX.gz
@@ -62,38 +60,38 @@ Using the following command to assign task to each device. (Assign task A on dev
 
 ```
 $python main.py 0 1 1 2
+
+Processor 0 port : 53099
+task_A should be finished on processor 0
+Processor 1 port : 36325
+task_C should be finished on processor 1
+The result is 271.0
+Processor 2 port : 43692
+task_D should be finished on processor 2
+Execute time :0.176686048508 seconds
 ```
+
+The input number is defined in the main.py, for our main.py, it creates the execute.py and then uses mpiexec to run it.
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+For this project, we just use the simple 'send' and 'recv' communication, for further usage, please go to [more MPI4PY usage](http://pythonhosted.org/mpi4py/usrman/index.html)
+
+Also, the [MPI could run on server cluster in LAN](http://mpitutorial.com/tutorials/running-an-mpi-cluster-within-a-lan/) and communicate with each other. If interested, please try it.
+
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [MPI4PY](http://pythonhosted.org/mpi4py/) - The distributed computing tool
+* [Argparse](https://docs.python.org/3/library/argparse.html) - Modified input task-device assignment
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* **SilongHu** - *Initial work* -
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* [Professor Bhaskar Krishnamachari](http://ceng.usc.edu/~bkrishna/)
+* [Ph.D Pranav Sakulkar](http://www-scf.usc.edu/~sakulkar/)
+* [Ph.D Kwame-Lante Wright](http://www-scf.usc.edu/~kwamelaw/)
