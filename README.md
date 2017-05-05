@@ -1,4 +1,4 @@
-# USC Directed Research
+# Distributed Wireless Computing
 
 USC 2017 Spring Directed Research ----- Distributed Wireless Computing
 
