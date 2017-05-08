@@ -62,14 +62,13 @@ Using the following command to assign task to each device. (Assign task A on dev
 ```
 $python main.py 0 1 1 2
 
-Processor 0 port : 53099
 task_A should be finished on processor 0
-Processor 1 port : 36325
+task_B should be finished on processor 1
 task_C should be finished on processor 1
 The result is 271.0
-Processor 2 port : 43692
 task_D should be finished on processor 2
-Execute time :0.176686048508 seconds
+Execute time :0.217902898788 seconds
+
 ```
 
 The input number is defined in the main.py, for our main.py, it creates the execute.py and then uses mpiexec to run it.
