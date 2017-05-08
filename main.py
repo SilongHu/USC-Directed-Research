@@ -132,6 +132,9 @@ for rank in rank_list:
 
 		Destination_task = task_graph[task]
 
+		execute_print = 'print \'task_' + str(task)+' should be finished on processor '+str(rank)+'\' \n'
+		f.write('	'+execute_print)
+
 		for destination in Destination_task:
 			# The task on the same processor
 			if destination in tasks_should_done:
@@ -146,10 +149,10 @@ for rank in rank_list:
 				execute_send = 'comm.send('+'data_'+str(task)+',dest = '+str(destina_rank)+')\n'
 				f.write('	'+execute_send)
 
-	execute_port = 'print \'Processor \'+ str(rank) +\' port : \' + port\n'
-	f.write('	'+execute_port)
-	execute_print = 'print \'task_' + str(task)+' should be finished on processor '+str(rank)+'\' \n'
-	f.write('	'+execute_print)
+	#execute_port = 'print \'Processor \'+ str(rank) +\' port : \' + port\n'
+	#f.write('	'+execute_port)
+	#execute_print = 'print \'task_' + str(task)+' should be finished on processor '+str(rank)+'\' \n'
+	#f.write('	'+execute_print)
 
 
 f.close()
